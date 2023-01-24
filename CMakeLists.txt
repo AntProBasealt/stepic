@@ -12,14 +12,14 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Core REQUIRED)
-find_package(GTest)
+#find_package(GTest)
 
 add_executable(stepic
   multiple.cpp
 )
 target_link_libraries(stepic PRIVATE Qt5::Core)
-target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})
+#target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})
 
-target_link_libraries(stepik_tests PRIVATE ${GTEST_BOTH_LIBRARIES})
+#target_link_libraries(stepik_tests PRIVATE ${GTEST_BOTH_LIBRARIES})
 
-add_executable(stepik_tests test.cpp)
+#add_executable(stepik_tests test.cpp)
