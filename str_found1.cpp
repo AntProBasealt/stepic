@@ -1,7 +1,7 @@
-//#include <iostream>
-//#include <string>
+#include <iostream>
+#include <string>
 
-//using namespace std;
+using namespace std;
 
 //int strstr1(const char *text, const char *pattern)
 //{
@@ -21,30 +21,21 @@
 //        text++;
 //    }
 //    return 0;
-
 //}
-
 //int main ()
 //{
-
 //    char *s1 = "123";
 //    char *s2  = "456123";
 ////    char s [] = {"Я сегодня уже ходил на улицу\n"};
 ////    char s1[] = {"уже"};
-
 //    std::cout << strstr1(s2, s1) << std::endl;
-
 //    return 0;
-
 //}
-
-//------------------------------------------------------------------
-
-#include <iostream>
+    //------------------------------------------------------------------
 
 // Функция для поиска подстроки в строке
 // + поиск позиции, с которой начинается подстрока
-int pos(char *s, char *c, int n)
+int pos(char *s, char *c)
 {
  int i, j; // Счетчики для циклов
  int lenC, lenS; // Длины строк
@@ -59,13 +50,20 @@ int pos(char *s, char *c, int n)
  // Если посимвольно совпадает по длине искомого
  // Вернем из функции номер ячейки, откуда начинается совпадение
  // Учитывать 0-терминатор  ( '\0' )
- if (j - lenC == 1 && i == lenS - lenC && !(n - 1)) return i;
- if (j == lenC)
- if (n - 1) n--;
- else return i;
+ if (j - lenC == 1 && i == lenS - lenC) return i;
  }
- //Иначе вернем -1 как результат отсутствия подстроки
  return -1;
+}
+void test()
+{
+ (0  == pos("","")) ? std::cout<<"OK : 1"<< " (" << 0 << " : " << (0  == pos("","")) << " )" << endl
+                            : cout<< "Failed : 1"<< " (" << 0 << " : " << (0  == pos("","")) << " )" << endl ;
+ (0 == pos("a", "")) ? cout<<"OK : 2"<< " (" << 0 << " : " <<   (0 == pos("a", "")) << " )" << endl
+                             : cout<< "Failed : 2"<< " (" << 0 << " : " <<   (0 == pos("a", "")) << " )" << endl ;
+ (0 == pos("a", "a")) ? cout<<"OK : 3"<< " (" << 0 << " : " <<   (0 == pos("a", "a")) << " )" << endl
+                              : cout<< "Failed : 3"<< " (" << 0 << " : " <<   (0 == pos("a", "a")) << " )" << endl ;
+ (-1 == pos("a", "b")) ? cout<<"OK : 4"<< " (" << -1 << " : " <<   (-1 == pos("a", "b")) << " )" << endl
+                               : cout<< "Failed : 4"<< " (" << -1 << " : " <<   (-1 == pos("a", "b")) << " )" << endl ;
 }
 
 int main()
@@ -77,9 +75,9 @@ int main()
 
  for (i = 1; n != -1; i++)
  {
- n = pos(s, c, i);
+// n = pos(s, c, i);
 
  if (n >= 0)
- std:: cout << n << std:: endl;
+ std::cout << n << std::endl;
  }
 }

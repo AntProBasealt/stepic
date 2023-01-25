@@ -15,11 +15,10 @@ find_package(Qt5 COMPONENTS Core REQUIRED)
 #find_package(GTest)
 
 add_executable(stepic
-  multiple.cpp
-)
+    multiple.cpp)
 
-add_executable(string
-    string.cpp)
+add_executable(string1
+    string1.cpp)
 
 add_executable(range
     range.cpp)
@@ -27,8 +26,8 @@ add_executable(range
 add_executable(rotate
     rotate.cpp)
 
-add_executable(str_found
-    str_found.cpp)
+add_executable(str_found1
+    str_found1.cpp)
 
 target_link_libraries(stepic PRIVATE Qt5::Core)
 #target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})
