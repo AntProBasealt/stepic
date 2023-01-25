@@ -17,6 +17,19 @@ find_package(Qt5 COMPONENTS Core REQUIRED)
 add_executable(stepic
   multiple.cpp
 )
+
+add_executable(string
+    string.cpp)
+
+add_executable(range
+    range.cpp)
+
+add_executable(rotate
+    rotate.cpp)
+
+add_executable(str_found
+    str_found.cpp)
+
 target_link_libraries(stepic PRIVATE Qt5::Core)
 #target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})
 
