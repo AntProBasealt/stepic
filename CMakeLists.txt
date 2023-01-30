@@ -14,6 +14,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 COMPONENTS Core REQUIRED)
 #find_package(GTest)
 
+#add_executable(example
+#    example.cpp)
+
 add_executable(stepic
     multiple.cpp)
 
@@ -28,8 +31,24 @@ add_executable(rotate
 
 add_executable(str_found1
     str_found1.cpp)
-add_executable(example
-    example.cpp)
+
+add_executable(getline1
+    getline1.cpp)
+
+add_executable(2_7matrixM
+    matrixM.cpp)
+
+add_executable(2_6_resize
+    2_6_resize.cpp)
+
+add_executable(3_3_string
+    3_3_string.cpp)
+
+add_executable(3_3_string_destr
+    3_3_string_destr.cpp)
+
+add_executable(2_6_getline
+    2_6_getline.cpp)
 
 target_link_libraries(stepic PRIVATE Qt5::Core)
 #target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})

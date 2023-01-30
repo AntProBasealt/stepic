@@ -15,22 +15,18 @@ unsigned strlen1(const char* str)
     return i;
 }
 
-void strcat1(char* to, const char* from)
+char *strcat1 (char* to, const char* from)
 {
-    int len1 = strlen1(to);
-    int len2 = strlen1(from);
+    char buffer[strlen1(to) + strlen1(from)];
 
-    for (int i = 0; i < len2+1; i++)
-    {
-        to[len1] = from[i];
-        len1++;
-    }
+
+    return buffer;
 }
 
 int main()
 {
-    char to[25] = "first";
+    char to[] = "first";
     char from[] = "second";
     strcat1(to, from);
-    std::cout << to << std::endl;
+    std::cout << to << " " <<from << std::endl;
 }
