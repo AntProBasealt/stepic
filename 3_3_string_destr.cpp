@@ -3,7 +3,10 @@
 
 struct String {
     /* Реализуйте этот конструктор */
-	String(size_t n, char c)
+    size_t size;
+    char *str;
+
+    String(size_t n, char c)
     {
         char* s = new char[n + 1];
         for(int i = 0;i <= n; i++)
@@ -14,14 +17,11 @@ struct String {
         size = n;
         this->str = s;
     }
-
     /* и деструктор */
-	~String()
+    ~String()
     {
-         delete [] str;
+        delete [] str;
     }
-	size_t size;
-	char *str;
 };
 
 int main()

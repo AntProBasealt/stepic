@@ -50,6 +50,12 @@ add_executable(3_3_string_destr
 add_executable(2_6_getline
     2_6_getline.cpp)
 
+add_executable(2_7_2d_arr
+    2_7_2d_arr.cpp)
+
+add_executable(3_3_string_append
+    3_3_string_append.cpp)
+
 target_link_libraries(stepic PRIVATE Qt5::Core)
 #target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})
 
