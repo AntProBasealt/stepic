@@ -40,23 +40,25 @@ struct CustomString
 
     void append2(CustomString &other)
     {
-        char* str2 = new char[size + other.size];
-        memcpy(str2, str, size);
-        memcpy(str2, &other, size);
-        str2[size + 1] = '\0';
-        str = str2;
+//        char* str2 = new char[size];
+//        memcpy(str2, str, size);
 
-        std::cout << "Result string: " << str2 << std::endl;
+        char* tmp = new char[size + other.size];
+        memcpy(tmp, str, size);
+//        char* tmp = new char[size + other.size];
+        memcpy(&tmp[7], &other.str, other.size);
+        tmp[size + 1] = '\0';
+        std::cout << "Result string: " << tmp << std::endl;
     }
 
-    void app3(CustomString &other)
-    {
-//        char* dst = new char[size];
-        char* dst = new char[size + other.size];
-        strcpy(dst, str);
-        strcpy(&dst[size + 1], &other);
-//        dst* = char[size + 1];
-        strcat(dst, &other);
+//    void app3(CustomString &other)
+//    {
+////        char* dst = new char[size];
+//        char* dst = new char[size + other.size];
+//        strcpy(dst, str);
+//        strcpy(&dst[size + 1], &other);
+////        dst* = char[size + 1];
+//        strcat(dst, &other);
 //        dst[size + other.size] = ;
 //        for(size_t i = size + 1; i <= size + other.size; ++i)
 //        {
@@ -64,9 +66,9 @@ struct CustomString
 //        }
 //        std::memcpy(dst, &other, size);
 //        std::strcat(dst, other);
-        dst[size + other.size + 1] = '\0';
-        std::cout << str << '\n' << dst << '\n';
-    }
+//        dst[size + other.size + 1] = '\0';
+//        std::cout << str << '\n' << dst << '\n';
+//    }
 
 };
 
@@ -95,9 +97,9 @@ CustomString::CustomString(size_t n, char c)
 int main()
 {
     CustomString s1("Hello,");
-    CustomString s2(" world123");
+    CustomString s2("1");
 
-//    s1.append2(s2);
-    s1.app3(s2);
+    s1.append2(s2);
+//    s1.app3(s2);
 
 }
