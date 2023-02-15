@@ -59,6 +59,9 @@ add_executable(3_3_string_append
 add_executable(3_5_modificator
     3_5_modificator.cpp)
 
+add_executable(3_6_const.cpp
+    3_6_const.cpp)
+
 target_link_libraries(stepic PRIVATE Qt5::Core)
 #target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})
 
