@@ -65,8 +65,8 @@ add_executable(3_5_modificator
 #add_executable(get_address
 #    get_address.cpp)
 
-add_executable(3_7_memory
-    3_7_memory.cpp)
+#add_executable(3_7_memory
+#    3_7_memory.cpp)
 
 add_executable(3_7_constructor
     3_7_constructor.cpp)
