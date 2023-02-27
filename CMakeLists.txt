@@ -70,6 +70,8 @@ add_executable(3_7_memory
 
 add_executable(3_7_constructor
     3_7_constructor.cpp)
+add_executable(3_7_operator
+    3_7_operator.cpp)
 
 target_link_libraries(stepic PRIVATE Qt5::Core)
 #target_include_directories(stepik_tests PRIVATE ${GTEST_INCLUDE_DIRS})
